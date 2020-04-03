@@ -1,4 +1,5 @@
 import Characters.Barbarian;
+import Player.AllegianceType;
 import Weapons.Axe;
 import Weapons.IWeapon;
 import Weapons.Mace;
@@ -23,7 +24,7 @@ public class BarbarianTest {
         ArrayList<IWeapon> inventory = new ArrayList<IWeapon>();
         mace = new Mace();
         axe = new Axe();
-        barbarian = new Barbarian("Bhettfug", 1000, inventory, mace);
+        barbarian = new Barbarian("Bhettfug", 1000, AllegianceType.GOOD, inventory, mace);
     }
 
     @Test
@@ -39,7 +40,10 @@ public class BarbarianTest {
         assertEquals(938, barbarian.getHealthPoints());
     }
 
-
+    @Test
+    public void canGetAllegiance(){
+        assertEquals(AllegianceType.GOOD, barbarian.getAllegiance());
+    }
 
 
 }

@@ -2,6 +2,7 @@ package Characters;
 
 import Player.Player;
 import Weapons.IWeapon;
+import Player.AllegianceType;
 
 import java.util.ArrayList;
 
@@ -10,8 +11,8 @@ public class Barbarian extends Warrior {
 
     private IWeapon activeWeapon;
 
-    public Barbarian(String name, int healthPoints, ArrayList<IWeapon> inventory, IWeapon activeWeapon){
-        super(name, healthPoints, inventory);
+    public Barbarian(String name, int healthPoints, AllegianceType allegiance, ArrayList<IWeapon> inventory, IWeapon activeWeapon){
+        super(name, healthPoints, allegiance, inventory);
         this.activeWeapon = activeWeapon;
     }
 
